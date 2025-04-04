@@ -1,0 +1,50 @@
+import shutil
+
+# Create the project folder and files
+project_folder = "/mnt/data/my-portfolio-site"
+index_path = f"{project_folder}/index.html"
+style_path = f"{project_folder}/style.css"
+resume_source = "/mnt/data/resume.pdf"
+resume_dest = f"{project_folder}/resume.pdf"
+
+# Create the project folder
+os.makedirs(project_folder, exist_ok=True)
+
+# HTML content with resume embed and about me
+index_html = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mrunal Jadhor - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mrunal Jadhor</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#resume">Resume</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm a second-year B.Tech student at MIT-WPU, Pune, specializing in Electronics and Communication Engineering.
+            I’m passionate about digital electronics, embedded systems, and circuit design. My interests lie in designing 
+            and implementing digital logic circuits and embedded programming.
+        </p>
+    </section>
+
+    <section id="resume">
+        <h2>My Resume</h2>
+        <p><a href="resume.pdf" download>Click here to download my resume (PDF)</a></p>
+        <iframe src="resume.pdf" width="100%" height="600px"></iframe>
+    </section>
+
+    <footer>
+        <p>© 2025 Mrunal Jadhor | Pune | <a href="mailto:mrunaljadhor@gmail.com">Email Me</a></p>
+    </footer>
+</body>
+</html>
+"""
