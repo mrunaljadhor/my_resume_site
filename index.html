@@ -1,101 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mrunal Jadhor | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrunal's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="openModal('aboutModal')">About</a></li>
+            <li><a href="#" onclick="openModal('projectsModal')">Projects</a></li>
+            <li><a href="#" onclick="openModal('achievementsModal')">Achievements</a></li>
+            <li><a href="#" onclick="openModal('hobbiesModal')">Hobbies</a></li>
+            <li><a href="#" onclick="openModal('contactModal')">Contact</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1>Mrunal Jadhor</h1>
-        <p class="subtitle">Electronics & Communication Engineering Student</p>
-        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-        <nav>
-            <a href="#about">About</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#projects">Projects</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <p>Electronics & Communication Engineering Student</p>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I'm a second-year B.Tech student at MIT-WPU, Pune, specializing in Electronics and Communication Engineering.
-            I’m passionate about digital electronics, embedded systems, and circuit design.
-        </p>
-    </section>
-
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Participated in <strong>Smart India Hackathon 2024</strong> – Cost Optimization of Prosthetics.</li>
-            <li>HackMIT25 – <strong>Inner Sanctuary</strong>: Health care support manager with chatbot for corporate employees.</li>
-            <li>Certified in:
-                <ul>
-                    <li>MATLAB Onramp</li>
-                    <li>Signal Processing Onramp</li>
-                    <li>C++ Programming</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Star Wars Game using Arduino UNO</strong> – Built using motion sensors for interactive experience.</li>
-            <li><strong>Bus Crowd Management</strong> – Implemented with Arduino for smart urban mobility.</li>
-            <li><strong>Attendance System</strong> – Developed using Arduino and UDP communication.</li>
-            <li><strong>TCP Protocol Simulations</strong> – Designed and studied TCP/IP communication behavior.</li>
-        </ul>
-    </section>
-
-    <section id="hobbies">
-        <h2>Hobbies & Interests</h2>
-        <p>
-            I love <strong>swimming</strong>, <strong>drawing and painting</strong>, <strong>traveling</strong>, <strong>dancing</strong>, and <strong>reading fiction</strong>!
-            I'm also passionate about creating content and working on hands-on electronics projects.
-        </p>
-    </section>
-
-    <section id="resume">
-        <h2>Resume</h2>
-        <a class="button" id="openResume">📄 View Resume</a>
-    </section>
-
-    <div id="resumeModal" class="modal">
-        <span class="close" id="closeModal">&times;</span>
-        <embed class="modal-content" src="resume.pdf" type="application/pdf" width="100%" height="600px"/>
+    <!-- About Me Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+            <h2>About Me</h2>
+            <p>A passionate ECE student with a strong interest in technology and innovation.</p>
+        </div>
     </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:mrunaljadhor@gmail.com">mrunaljadhor@gmail.com</a></p>
-        <p>Phone: <a href="tel:+917559327446">+91 75593 27446</a></p>
-        <p>Location: Pune, India</p>
-    </section>
+    <!-- Projects Modal -->
+    <div id="projectsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('projectsModal')">&times;</span>
+            <h2>Projects</h2>
+            <ul>
+                <li>Star Wars game using Arduino Nano</li>
+                <li>Asynchronous MOD-5 Up Counter</li>
+                <!-- Add more if needed -->
+            </ul>
+        </div>
+    </div>
 
-    <footer>
-        <p>© 2025 Mrunal Jadhor</p>
-    </footer>
+    <!-- Achievements Modal -->
+    <div id="achievementsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('achievementsModal')">&times;</span>
+            <h2>Achievements</h2>
+            <p>Highlights from resume (certificates, academic milestones, etc.)</p>
+        </div>
+    </div>
+
+    <!-- Hobbies Modal -->
+    <div id="hobbiesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('hobbiesModal')">&times;</span>
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>Reading fiction</li>
+                <li>Watching anime</li>
+                <li>Tech projects and DIY electronics</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Contact Me</h2>
+            <p>Phone: +91-XXXXXXXXXX</p>
+            <p>Email: your.email@example.com</p>
+        </div>
+    </div>
 
     <script>
-        const modal = document.getElementById("resumeModal");
-        const btn = document.getElementById("openResume");
-        const span = document.getElementById("closeModal");
-        btn.onclick = () => modal.style.display = "block";
-        span.onclick = () => modal.style.display = "none";
-        window.onclick = (event) => {
-            if (event.target == modal) modal.style.display = "none";
-        };
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            document.querySelectorAll(".modal").forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
     </script>
 </body>
 </html>
-"""
+
 
