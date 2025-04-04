@@ -1,18 +1,4 @@
-from pathlib import Path
-import shutil
 
-# Paths
-project_folder = Path("/mnt/data/mrunal_anime_portfolio")
-index_path = project_folder / "index.html"
-style_path = project_folder / "style.css"
-resume_source = Path("/mnt/data/resume.pdf")
-resume_dest = project_folder / "resume.pdf"
-
-# Create project directory
-project_folder.mkdir(parents=True, exist_ok=True)
-
-# Anime-themed index.html
-index_html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
