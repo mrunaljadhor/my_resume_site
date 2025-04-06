@@ -1,29 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mrunal Jadhor</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrunal - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #ffe6f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff69b4;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #d63384;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            color: #c2185b;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
+    <header>
+        <img src="assets/images/profile.jpg" alt="Mruna Jadhorl's Profile Picture" class="profile-pic">
+        <h1>Mrunal Jadhor</h1>
+    </header>
+
     <nav>
-      <div class="logo">Mrunal</div>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
     </nav>
-  </header>
-  <section class="hero">
-    <img src="profile.jpg" alt="Mrunal's Profile Picture" class="profile-pic" />
-    <h1>Hello, I'm Mrunal Jadhor</h1>
-    <p>Final Year B.Tech Student in Electronics & Telecommunication Engineering</p>
-    <p>Passionate about programming, Embedded Systems and VLSI Design</p>
-  </section>
 </body>
+
 </html>

@@ -1,29 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Mrunal Jadhor</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffe6f0;
+      color: #333;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background-color: #ffccdd;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      color: #d63384;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #d63384;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: color 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #a31463;
+    }
+
+    .main {
+      margin-left: 220px;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #c2185b;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-  <section class="content">
-    <h1>Contact Me</h1>
-    <p>If you'd like to get in touch, you can reach me at:</p>
-    <ul>
-      <li><strong>Email:</strong> mrunaljadhor@gmail.com</li>
-      <li><strong>Phone:</strong> +91 75593 27446</li>
-      <li>Address:</strong>Pune</li>
-    </ul>
-  </section>
+  <div class="sidebar">
+    <h2>Mrunal</h2>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="main">
+    <section class="content">
+      <h1>Contact Me</h1>
+      <p>If you'd like to get in touch, you can reach me at:</p>
+      <ul>
+        <li><strong>Email:</strong> mrunaljadhor@gmail.com</li>
+        <li><strong>Phone:</strong> +91 75593 27446</li>
+        <li><strong>Address:</strong> Pune</li>
+      </ul>
+    </section>
+  </div>
 </body>
+
 </html>

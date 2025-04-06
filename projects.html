@@ -1,29 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Mrunal Jadhor</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffe6f0;
+      color: #333;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background-color: #ffccdd;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      color: #d63384;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #d63384;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: color 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #a31463;
+    }
+
+    .main {
+      margin-left: 220px;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #c2185b;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <section class="content">
-    <h1>My Achievements & Projects</h1>
-    <ul class="achievements-projects">
-      <li><strong>TOP 50:</strong> Smart India Hackathon(2024) - Cost reduction of prosthetics</li>
-      <li><strong>HACKMIT25:</strong> INNER SANCTUARY( HEALTH CARE SUPPORT MANAGER WITH CHATBOT) FOR CORPORATE EMPLOYEESS</li>
-      <li><strong>PROJECTS:</strong>Bus crowd management using Arduino</li>
-      <li><strong></strong> Attendance system by Arduino and UDP -TCP protocols & Star wars project using Arduino UNO and motion sensors.</li>
-    </ul>
-  </section>
+  <div class="sidebar">
+    <h2>Mrunal</h2>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="main">
+    <section class="content">
+      <h1>My Achievements & Projects</h1>
+      <ul class="achievements-projects">
+        <li><strong>TOP 50:</strong> Smart India Hackathon (2024) - Cost reduction of prosthetics</li>
+        <li><strong>HACKMIT25:</strong> INNER SANCTUARY – Healthcare support manager with chatbot for corporate employees</li>
+        <li><strong>Project:</strong> Bus crowd management using Arduino</li>
+        <li><strong>Project:</strong> Attendance system by Arduino and UDP-TCP protocols</li>
+        <li><strong>Project:</strong> Star Wars project using Arduino UNO and motion sensors</li>
+      </ul>
+    </section>
+  </div>
 </body>
+
 </html>

@@ -1,43 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume - Mrunal Jadhor</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffe6f0;
+      color: #333;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background-color: #ffccdd;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      color: #d63384;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #d63384;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: color 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #a31463;
+    }
+
+    .main {
+      margin-left: 220px;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      color: #c2185b;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .content {
+      line-height: 1.8;
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <div class="logo">Mrunal</div>
+  <div class="sidebar">
+    <h2>Mrunal</h2>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="main">
+    <section class="content">
+      <h1>Resume</h1>
+
+      <h2>Education</h2>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html" class="active">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><strong>B.Tech in Electronics and Telecommunication Engineering</strong><br>MIT World Peace University, Pune | 2023 - 2027 |</li>
       </ul>
-    </nav>
-  </header>
-  <section class="content">
-    <h1>Resume</h1>
-    <h2>Education</h2>
-    <ul>
-      <li><strong>B.Tech in Electronics and Telecommunication Engineering</strong><br>MIT World Peace University, Pune | 2023 - 2027 |</li>
-    </ul>
-    <h2>Certifications</h2>
-    <ul>
-      <li>python programming basic to advanced</li>
-      <li>C++ programming </li>
-      <li>MATLAB: onramp and signal processing</li>
-    </ul>
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Languages: C++, C, Python, Embedded C</li>
-      <li>Design: AutoCAD, NI Multisim, Cisco packet tracer</li>
-      <li>Content Creation </li>
-      <li>Other Tools: MATLAB, Git, VS Code, kiel uVision</li>
-    </ul>
-  </section>
+
+      <h2>Certifications</h2>
+      <ul>
+        <li>python programming basic to advanced</li>
+        <li>C++ programming</li>
+        <li>MATLAB: onramp and signal processing</li>
+      </ul>
+
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Languages: C++, C, Python, Embedded C</li>
+        <li>Design: AutoCAD, NI Multisim, Cisco packet tracer</li>
+        <li>Content Creation</li>
+        <li>Other Tools: MATLAB, Git, VS Code, kiel uVision</li>
+      </ul>
+    </section>
+  </div>
 </body>
+
 </html>
