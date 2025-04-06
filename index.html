@@ -7,6 +7,53 @@
   <title>Mrunal Jadhor - Home</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background-color: #ffc1e3;
+      padding-top: 20px;
+    }
+
+    .sidebar-logo {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0 10px;
+    }
+
+    .sidebar-logo img {
+      width: 80px;
+      height: auto;
+    }
+
+    .sidebar ul {
+      list-style-type: none; /* 🔥 removes the black dots */
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #c2185b;
+      font-weight: bold;
+    }
+
+    .sidebar ul li a.active {
+      color: #c2185b;
+      font-weight: bold;
+    }
+
     .main-content {
       margin-left: 220px;
       padding: 40px;
@@ -28,6 +75,8 @@
       display: flex;
       align-items: center;
       gap: 30px;
+      justify-content: flex-start; /* 👈 aligns everything to the left */
+      text-align: left;
     }
 
     .home-header h1 {
@@ -41,17 +90,6 @@
       font-size: 1.1em;
       color: #444;
       max-width: 700px;
-    }
-
-    .sidebar-logo {
-      display: flex;
-      justify-content: center;
-      padding: 20px 0 10px;
-    }
-
-    .sidebar-logo img {
-      width: 80px;
-      height: auto;
     }
   </style>
 </head>
@@ -86,3 +124,4 @@
 </body>
 
 </html>
+
