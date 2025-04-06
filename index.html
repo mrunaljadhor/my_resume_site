@@ -7,85 +7,66 @@
   <title>Mrunal Jadhor - Home</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffe6f0;
-      color: #333;
-    }
-
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 200px;
-      background-color: #ffccdd;
-      padding-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .sidebar h2 {
-      margin-bottom: 30px;
-      color: #d63384;
-    }
-
-    .sidebar a {
-      text-decoration: none;
-      color: #d63384;
-      font-weight: bold;
-      margin: 10px 0;
-      transition: color 0.3s;
-    }
-
-    .sidebar a:hover {
-      color: #a31463;
-    }
-
-    .main {
+    .main-content {
       margin-left: 220px;
-      padding: 2rem;
+      padding: 40px;
+      background-color: #ffe6f0;
+      min-height: 100vh;
     }
 
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .profile img {
-      width: 150px;
-      height: 150px;
+    .profile-pic {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 4px solid #f06292;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
     }
 
-    h1 {
+    .home-header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .home-header h1 {
+      margin: 0;
       color: #c2185b;
+      font-size: 2em;
+    }
+
+    .home-text {
+      margin-top: 15px;
+      font-size: 1.1em;
+      color: #444;
+      max-width: 700px;
     }
   </style>
 </head>
 
 <body>
-  <div class="sidebar">
+  <nav class="sidebar">
     <h2>Mrunal</h2>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="main">
-    <div class="profile">
-      <img src="profile.jpg" alt="Profile Picture">
+  <div class="main-content">
+    <div class="home-header">
+      <img src="profile.jpg" alt="Mrunal Jadhor" class="profile-pic" />
       <div>
         <h1>Mrunal Jadhor</h1>
-        <p>Second Year B.Tech Student in Electronics and Telecommunication Engineering at MIT World Peace University, Pune.</p>
-        <p>Passionate about Embedded Systems, VLSI Design, and hands-on projects.</p>
+        <p class="home-text">
+          Second Year B.Tech Student in Electronics and Telecommunication Engineering at MIT World Peace University, Pune.
+          <br />
+          Passionate about Embedded Systems, VLSI Design, and hands-on projects.
+        </p>
       </div>
     </div>
   </div>
