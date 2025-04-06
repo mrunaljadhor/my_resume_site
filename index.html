@@ -2,68 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mrunal - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: #ffe6f0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mrunal Jadhor - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffe6f0;
+      color: #333;
+    }
 
-        header {
-            padding: 2rem;
-            text-align: center;
-        }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background-color: #ffccdd;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .profile-pic {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #ff69b4;
-            margin-bottom: 1rem;
-        }
+    .sidebar h2 {
+      margin-bottom: 30px;
+      color: #d63384;
+    }
 
-        nav {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    .sidebar a {
+      text-decoration: none;
+      color: #d63384;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: color 0.3s;
+    }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #d63384;
-        }
+    .sidebar a:hover {
+      color: #a31463;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    .main {
+      margin-left: 220px;
+      padding: 2rem;
+    }
 
-        h1 {
-            color: #c2185b;
-        }
-    </style>
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #c2185b;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <img src="assets/images/profile.jpg" alt="Mruna Jadhorl's Profile Picture" class="profile-pic">
-        <h1>Mrunal Jadhor</h1>
-    </header>
+  <div class="sidebar">
+    <h2>Mrunal</h2>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <div class="main">
+    <div class="profile">
+      <img src="profile.jpg" alt="Profile Picture">
+      <div>
+        <h1>Mrunal Jadhor</h1>
+        <p>Second Year B.Tech Student in Electronics and Telecommunication Engineering at MIT World Peace University, Pune.</p>
+        <p>Passionate about Embedded Systems, VLSI Design, and hands-on projects.</p>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
