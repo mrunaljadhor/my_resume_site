@@ -19,24 +19,30 @@
       top: 0;
       left: 0;
       height: 100%;
-      width: 200px;
-      background-color: #ffccdd;
+      width: 220px;
+      background-color: #ffc1e3;
       padding-top: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .sidebar h2 {
-      margin-bottom: 30px;
-      color: #d63384;
+    .sidebar-logo {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0 10px;
+    }
+
+    .sidebar-logo img {
+      width: 80px;
+      height: auto;
     }
 
     .sidebar a {
       text-decoration: none;
-      color: #d63384;
+      color: #c2185b;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 15px 0;
       transition: color 0.3s;
     }
 
@@ -47,14 +53,23 @@
     .main {
       margin-left: 220px;
       padding: 2rem;
+      background-color: #ffe6f0;
+      min-height: 100vh;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       color: #c2185b;
+    }
+
+    h1 {
+      border-bottom: 2px dashed #d63384;
+      padding-bottom: 0.5rem;
     }
 
     ul {
       padding-left: 1.2rem;
+      font-size: 1.1rem;
     }
 
     ul li {
@@ -69,10 +84,12 @@
 
 <body>
   <div class="sidebar">
-    <h2>Mrunal</h2>
+    <div class="sidebar-logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="resume.html">Resume</a>
+    <a href="resume.html" class="active">Resume</a>
     <a href="projects.html">Projects</a>
     <a href="contact.html">Contact</a>
   </div>
@@ -83,25 +100,26 @@
 
       <h2>Education</h2>
       <ul>
-        <li><strong>B.Tech in Electronics and Telecommunication Engineering</strong><br>MIT World Peace University, Pune | 2023 - 2027 |</li>
+        <li><strong>B.Tech in Electronics and Telecommunication Engineering</strong><br>MIT World Peace University, Pune | 2023 - 2027</li>
       </ul>
 
       <h2>Certifications</h2>
       <ul>
-        <li>python programming basic to advanced</li>
-        <li>C++ programming</li>
-        <li>MATLAB: onramp and signal processing</li>
+        <li>Python Programming – Basic to Advanced</li>
+        <li>C++ Programming</li>
+        <li>MATLAB: Onramp and Signal Processing</li>
       </ul>
 
       <h2>Technical Skills</h2>
       <ul>
-        <li>Languages: C++, C, Python, Embedded C</li>
-        <li>Design: AutoCAD, NI Multisim, Cisco packet tracer</li>
-        <li>Content Creation</li>
-        <li>Other Tools: MATLAB, Git, VS Code, kiel uVision</li>
+        <li><strong>Languages:</strong> C++, C, Python, Embedded C</li>
+        <li><strong>Design Tools:</strong> AutoCAD, NI Multisim, Cisco Packet Tracer</li>
+        <li><strong>Content Creation:</strong> Video, Visual, & Presentation Design</li>
+        <li><strong>Other Tools:</strong> MATLAB, Git, VS Code, Keil uVision</li>
       </ul>
     </section>
   </div>
 </body>
 
 </html>
+

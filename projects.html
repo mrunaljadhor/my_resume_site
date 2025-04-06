@@ -19,24 +19,30 @@
       top: 0;
       left: 0;
       height: 100%;
-      width: 200px;
-      background-color: #ffccdd;
+      width: 220px;
+      background-color: #ffc1e3;
       padding-top: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .sidebar h2 {
-      margin-bottom: 30px;
-      color: #d63384;
+    .sidebar-logo {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0 10px;
+    }
+
+    .sidebar-logo img {
+      width: 80px;
+      height: auto;
     }
 
     .sidebar a {
       text-decoration: none;
-      color: #d63384;
+      color: #c2185b;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 15px 0;
       transition: color 0.3s;
     }
 
@@ -47,14 +53,20 @@
     .main {
       margin-left: 220px;
       padding: 2rem;
+      background-color: #ffe6f0;
+      min-height: 100vh;
     }
 
     h1 {
       color: #c2185b;
+      border-bottom: 2px dashed #d63384;
+      padding-bottom: 0.5rem;
     }
 
     ul {
       padding-left: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
     li {
@@ -65,11 +77,13 @@
 
 <body>
   <div class="sidebar">
-    <h2>Mrunal</h2>
+    <div class="sidebar-logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="resume.html">Resume</a>
-    <a href="projects.html">Projects</a>
+    <a href="projects.html" class="active">Projects</a>
     <a href="contact.html">Contact</a>
   </div>
 
@@ -77,11 +91,11 @@
     <section class="content">
       <h1>My Achievements & Projects</h1>
       <ul class="achievements-projects">
-        <li><strong>TOP 50:</strong> Smart India Hackathon (2024) - Cost reduction of prosthetics</li>
+        <li><strong>TOP 50:</strong> Smart India Hackathon (2024) – Cost reduction of prosthetics</li>
         <li><strong>HACKMIT25:</strong> INNER SANCTUARY – Healthcare support manager with chatbot for corporate employees</li>
         <li><strong>Project:</strong> Bus crowd management using Arduino</li>
-        <li><strong>Project:</strong> Attendance system by Arduino and UDP-TCP protocols</li>
-        <li><strong>Project:</strong> Star Wars project using Arduino UNO and motion sensors</li>
+        <li><strong>Project:</strong> Attendance system using Arduino and UDP-TCP protocols</li>
+        <li><strong>Project:</strong> Star Wars setup using Arduino UNO and motion sensors</li>
       </ul>
     </section>
   </div>
