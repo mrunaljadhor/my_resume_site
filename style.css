@@ -125,7 +125,7 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 20%;
   background: url('waves.svg') repeat-x;
   opacity: 0.05;
   animation: waveMotion 10s linear infinite;
