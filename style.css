@@ -29,6 +29,16 @@ body {
   gap: 1rem;
   z-index: 100;
 }
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar {
+  position: sticky;
+  z-index: 100; /* already correct */
+}
+
 
 .sidebar-logo img {
   width: 100%;
@@ -43,6 +53,12 @@ body {
   padding: 0.5rem;
   border-radius: 10px;
   transition: background 0.3s;
+}
+
+
+.sidebar {
+  position: sticky;
+  z-index: 100; /* already correct */
 }
 
 .sidebar a:hover,
