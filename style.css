@@ -105,19 +105,6 @@ ul {
   transform: scale(1.05);
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
 /* Animated Background (Waves) */
 body::before {
   content: '';
@@ -145,6 +132,7 @@ body::before {
   width: 100%;
   z-index: 0;
   pointer-events: none;
+opacity =1;
 }
 
 .bottom-wave svg {
