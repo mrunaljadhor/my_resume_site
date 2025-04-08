@@ -10,7 +10,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom right, #ffe4f0, #fff0f5);
   color: #333;
-  display: flex;
+  display: flex; /* IMPORTANT: Revert this change */
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
