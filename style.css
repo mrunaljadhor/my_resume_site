@@ -117,17 +117,6 @@ ul {
   }
 }
 
-/* Scroll Progress Bar */
-#scroll-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  background: #ff69b4;
-  width: 0%;
-  z-index: 999;
-  transition: width 0.2s;
-}
 
 /* Animated Background (Waves) */
 body::before {
