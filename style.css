@@ -64,7 +64,7 @@ body {
   animation: fadeIn 1s ease-in-out;
   position: relative;
   z-index: 1;
-  overflow-y: auto; /* Ensure main content doesn't cause horizontal scroll */
+  overflow-y: auto;
 }
 
 /* Headings */
@@ -149,7 +149,7 @@ body::before {
   100% { background-position-x: 1000px; }
 }
 
-/* Bottom Wave Element (no fade-in) */
+/* Bottom Wave Element (force opacity to 1) */
 .bottom-wave {
   position: absolute;
   bottom: 0;
@@ -159,6 +159,7 @@ body::before {
   pointer-events: none;
   overflow: hidden;
   line-height: 0;
+  opacity: 1 !important; /* Override any inherited opacity */
 }
 
 .bottom-wave svg {
