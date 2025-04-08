@@ -10,7 +10,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom right, #ffe4f0, #fff0f5);
   color: #333;
-  display: flex; /* IMPORTANT: Revert this change */
+  display: flex;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -64,6 +64,7 @@ body {
   animation: fadeIn 1s ease-in-out;
   position: relative;
   z-index: 1;
+  overflow-y: auto; /* Ensure main content doesn't cause horizontal scroll */
 }
 
 /* Headings */
@@ -148,7 +149,7 @@ body::before {
   100% { background-position-x: 1000px; }
 }
 
-/* Bottom Wave Element */
+/* Bottom Wave Element (no fade-in) */
 .bottom-wave {
   position: absolute;
   bottom: 0;
