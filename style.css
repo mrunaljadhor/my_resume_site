@@ -8,12 +8,13 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #ffe4f0, #fff0f5);
+  /* Remove the linear gradient for now to simplify background */
+  background-color: #fff0f5; /* Use the lighter shade as the main body background */
   color: #333;
   display: flex;
   min-height: 100vh;
   overflow-x: hidden;
-  position: relative; /* Ensure body is relative for absolute positioning of bottom-wave */
+  position: relative; /* For absolute positioning of the bottom-wave */
 }
 
 /* Sidebar */
@@ -29,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  z-index: 100;
+  z-index: 20; /* Ensure sidebar is on top */
 }
 
 .sidebar-logo img {
@@ -64,6 +65,7 @@ body {
   animation: fadeIn 1s ease-in-out;
   position: relative;
   z-index: 1;
+  background-color: #fff0f5; /* Ensure main content has the same background */
 }
 
 /* Headings */
@@ -154,14 +156,14 @@ body::before {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 0;
+  z-index: 5; /* Ensure wave is above the main content background */
   pointer-events: none;
-  overflow: hidden; /* Add this to contain the SVG */
-  line-height: 0; /* Add this to remove potential extra space below SVG */
+  overflow: hidden;
+  line-height: 0;
 }
 
 .bottom-wave svg {
   display: block;
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
 }
