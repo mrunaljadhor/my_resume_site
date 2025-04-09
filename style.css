@@ -8,14 +8,15 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff0f5; /* Consistent background */
+  background-color: #fff0f5;
   color: #333;
-  display: flex; /* Keep flex for sidebar layout */
+  display: flex;
   min-height: 100vh;
   overflow-x: hidden;
-  position: relative; /* For absolute positioning of bottom-wave */
+  position: relative;
 }
 
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -45,6 +46,7 @@ body {
   margin-right: 0.5rem;
 }
 
+/* Main Content */
 .main {
   flex-grow: 1;
   padding: 2rem;
@@ -53,6 +55,21 @@ body {
   z-index: 1;
 }
 
+h1, h2 {
+  color: #d63384;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.achievements-projects li {
+  margin-bottom: 1rem;
+}
+
+/* Bottom Wave */
 .bottom-wave {
   position: absolute;
   bottom: 0;
@@ -73,17 +90,16 @@ body {
   fill: #f89bc1;
 }
 
-/* ----------------------------------- */
-/* ✅ Additions for Typing Text + CTA */
-/* ----------------------------------- */
-
+/* Typing Animation */
 .typing-text {
   font-size: 1.6rem;
   color: #d63384;
   font-weight: bold;
-  border-right: 2px solid #ff69b4;
   white-space: nowrap;
   overflow: hidden;
+  border-right: 2px solid #ff69b4;
+  width: fit-content;
+  margin-top: 2rem;
 }
 
 @keyframes typing {
@@ -96,6 +112,7 @@ body {
   50% { border-color: #ff69b4 }
 }
 
+/* CTA Button */
 .cta-button {
   display: inline-block;
   background-color: #ff69b4;
@@ -113,4 +130,23 @@ body {
 .cta-button:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(255, 105, 180, 0.6);
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
 }
