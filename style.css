@@ -72,3 +72,48 @@ body {
 .bottom-wave .path {
   fill: #f89bc1;
 }
+
+/* ----------------------------------- */
+/* ✅ Additions for Typing Text + CTA */
+/* ----------------------------------- */
+
+.typing-text {
+  font-size: 1.6rem;
+  color: #d63384;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ff69b4;
+  width: fit-content;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  margin-top: 2rem;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #ff69b4 }
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(255, 105, 180, 0.6);
+}
