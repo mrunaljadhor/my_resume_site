@@ -23,25 +23,41 @@ document.addEventListener("DOMContentLoaded", () => {
     main.classList.add('fade-in');
   }
 
-  // === Typing Animation (only on homepage) ===
+  // === Line-by-line Typing Animation ===
+document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.querySelector('.typing-text');
   const phrases = [
     "Electronics Engineer.",
     "Web Developer.",
-    "Dreaming in pink & pixels 🌸"
+    "Code. Create. Design."
   ];
 
-  const textElement = document.querySelector('.typing-text');
   let currentPhrase = 0;
+  let currentChar = 0;
+  let isDeleting = false;
 
-  if (textElement) {
-    function updateTypingText() {
-      textElement.textContent = phrases[currentPhrase];
-      textElement.classList.remove("typing-text");
-      void textElement.offsetWidth; // Force reflow to reset animation
-      textElement.classList.add("typing-text");
-      currentPhrase = (currentPhrase + 1) % phrases.length;
+  function typeLine() {
+    const currentText = phrases[currentPhrase];
+    if (textElement) {
+      if (!isDeleting) {
+        textElement.textContent = currentText.slice(0, currentChar + 1);
+        currentChar++;
+        if (currentChar === currentText.length) {
+          isDeleting = true;
+          setTimeout(typeLine, 2000); // Pause after full line
+          return;
+        }
+      } else {
+        textElement.textContent = currentText.slice(0, currentChar - 1);
+        currentChar--;
+        if (currentChar === 0) {
+          isDeleting = false;
+          currentPhrase = (currentPhrase + 1) % phrases.length;
+        }
+      }
+      setTimeout(typeLine, isDeleting ? 40 : 80); // Typing speed
     }
-
-    setInterval(updateTypingText, 4000);
   }
+
+  typeLine(); // Start the animation
 });

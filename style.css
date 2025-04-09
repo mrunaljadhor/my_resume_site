@@ -81,12 +81,9 @@ body {
   font-size: 1.6rem;
   color: #d63384;
   font-weight: bold;
+  border-right: 2px solid #ff69b4;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #ff69b4;
-  width: fit-content;
-  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
-  margin-top: 2rem;
 }
 
 @keyframes typing {
