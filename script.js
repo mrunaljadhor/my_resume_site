@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     main.classList.add('fade-in');
   }
 
-  // === Line-by-line Typing Animation ===
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
   const textElement = document.querySelector('.typing-text');
   const phrases = [
     "Electronics Engineer.",
@@ -38,13 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function typeLine() {
     const currentText = phrases[currentPhrase];
+
     if (textElement) {
       if (!isDeleting) {
         textElement.textContent = currentText.slice(0, currentChar + 1);
         currentChar++;
         if (currentChar === currentText.length) {
           isDeleting = true;
-          setTimeout(typeLine, 2000); // Pause after full line
+          setTimeout(typeLine, 1000); // ⏳ SHORTER pause before deleting
           return;
         }
       } else {
@@ -55,9 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
           currentPhrase = (currentPhrase + 1) % phrases.length;
         }
       }
-      setTimeout(typeLine, isDeleting ? 40 : 80); // Typing speed
+
+      // ⏩ Typing & deleting speed: fast but readable
+      setTimeout(typeLine, isDeleting ? 30 : 50);
     }
   }
 
-  typeLine(); // Start the animation
+  typeLine(); // Start
 });
