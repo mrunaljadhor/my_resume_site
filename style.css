@@ -48,11 +48,13 @@ body {
 
 /* Main Content */
 .main {
-    flex-grow: 1;
-    padding: 2rem;
-    background-color: #fff0f5;
-    position: relative;
-    z-index: 1;
+    flex-grow: 1; /* Keep this to allow it to expand */
+    padding: 2rem; /* Keep the padding */
+    min-height: 100vh; /* Keep the minimum height */
+    position: relative; /* Keep the relative positioning */
+    z-index: 1; /* Keep the z-index */
+    margin-left: 200px; /* Add margin-left equal to the sidebar's width */
+    background-color: transparent;
 }
 
 /* Specific background image for nontech.html */
@@ -72,8 +74,8 @@ body.nontech .main::before {
     position: absolute;
     top: 0;
     right: 0;
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 100%;
     background-image: url('background.png'); /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
