@@ -57,11 +57,13 @@ body {
 
 /* Specific background image for nontech.html */
 body.nontech .main {
+    flex-grow: 1;
+    padding: 2rem;
     background-image: url('background.png'); /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.8; /* Adjust the opacity (0 to 1) */
+    opacity: 0.4; /* Adjust the opacity (0 to 1) */
 }
 
 h1, h2 {
