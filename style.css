@@ -58,17 +58,20 @@ body {
 /* Specific background image for nontech.html */
 /* Specific background image for nontech.html */
 body.nontech .main {
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
-    padding: 2rem; /* Keep the padding for the text */
-    /* Remove background image and opacity from the main element */
-    background-color: transparent; /* Set a transparent background for the main element */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 
 body.nontech .main::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background-image: url('background.png'); /* Replace with your image path */
